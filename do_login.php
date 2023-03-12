@@ -2,8 +2,10 @@
 session_start();
 
 include("connection.php");
+//check if do_login variable is declared from the ajax call
 if(isset($_POST['do_login']))
 {
+    //retrieve the username and password from validate.js post
     $user_name = $_POST['user_name'];
     $password = $_POST['password'];
     //check if fields are not empty and the name is not numeric

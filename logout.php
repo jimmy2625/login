@@ -1,13 +1,10 @@
 <?php
-
+//start session with that user
 session_start();
 
-//if there is a user with the given user_id then unset that user_id
-if(isset($_SESSION['user_id']))
-{
-	unset($_SESSION['user_id']);
-}
+//destroy all session data with that user
+session_destroy();
 
-//will always redirect to the login screen
+//redirect to the login screen
 header("Location: login.php");
-die;
+exit();

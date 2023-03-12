@@ -20,7 +20,7 @@ function check_login($con)
             return $user_data;
         }
     }
-    //if its not logged in, head back to login.php and die so the code doesnt continue
+    //if its not logged in, head back to login.php and exit so the code doesnt continue
     header("Location: login.php");
-    die;
+    exit();
 }
