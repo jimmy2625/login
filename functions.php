@@ -21,6 +21,6 @@ function check_login($con)
         }
     }
     //if its not logged in, head back to login.php and exit so the code doesnt continue
-    header("Location: login.php");
+    header("Location: login.html");
     exit();
 }
