@@ -30,15 +30,21 @@ body:before {
 /* container */
 .container {
   background-color: #1B1D2C;
-  border-radius: 20px;
+  border-radius: 20px 30px 50px;
   width: 300px;
   padding: 80px;
 }
 
 /* image container */
 .img-container {
-  padding: 20px 30px 50px; 
+  padding: 20px; 
   text-align:center;
+}
+
+/* spinner container */
+.spinner-container {
+  text-align:center;
+  height:45px;
 }
 
 /* label text */
