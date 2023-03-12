@@ -30,7 +30,11 @@ function do_login() {
                 //if fail alert that username or password is incorrect
                 else
                 {
-                    alert("Wrong username or password!");
+                    Swal.fire({
+                        icon:'error',
+                        title:'Wrong username or password!',
+                        confirmButtonColor: '#2C8897',
+                    }) 
                 }
             },
             // Set our complete callback, adding the .hidden class and hiding the spinner.
