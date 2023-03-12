@@ -15,6 +15,10 @@ function do_login() {
         user_name:user_name,
         password:pass
         },
+        // Before we send the request, remove the .hidden class from the spinner and default to inline-block.
+        beforeSend: function () { 
+            $("#spinner").show();
+        },
         //handle response from do_login.php
         success:function(response) 
             {
@@ -28,7 +32,11 @@ function do_login() {
                 {
                     alert("Wrong username or password!");
                 }
-            }
+            },
+            // Set our complete callback, adding the .hidden class and hiding the spinner.
+            complete: function () { 
+                $("#spinner").hide();
+            },
         });
     }
 
